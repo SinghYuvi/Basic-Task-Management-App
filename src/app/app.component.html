@@ -1,8 +1,21 @@
 <app-header />
 <main>
     <ul id="users">
+        <!-- Solution I(With latest @for template)-->
+        @for (user of users; track user.id) {
         <li>
-            <app-user />
+            <app-user [user]="user" [selected]="user.id === selectedUserId" (select)="onSelectChange($event)" />
         </li>
+        }
+        <!-- We can use legacy *ngFor template as well -->
     </ul>
+    
+    
+    <!-- Solution I(With latest @if else template) -->
+    @if(selectedUser){
+    <app-tasks [userId]="selectedUser.id" [name]="selectedUser.name" />
+    }@else {
+        <p id="fallback">Select a user to see their task!</p>
+    }
+    <!-- We can use legacy *ngIf and <ng-template> as well -->
 </main>
