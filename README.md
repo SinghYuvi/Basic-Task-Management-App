@@ -1,6 +1,8 @@
 # NewAngularApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.5. This project is made up with the Standalone Components.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.5. This project is made up with the Standalone Components[NO use of ngModule]. 
+
+Here, we have followed creating standalone components approach instead of Going with Module based approach. 
 
 ## Development server
 
